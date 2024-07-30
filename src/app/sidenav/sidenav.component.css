@@ -1,0 +1,105 @@
+body {
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #38b6ff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    /* padding-top: 60px; */
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #010101;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.sidenav.open {
+    width: 280px;
+}
+
+.my-card
+{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 2rem; /* Adjust as needed */
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center; /* Center the logo horizontally */
+    padding: 10px; /* Add some padding around the logo if needed */
+  }
+  
+  .logo {
+    max-width: 70%; /* Ensure the logo scales down on smaller screens */
+    height: auto; /* Maintain the aspect ratio */
+  }
+  
+  .menu-item {
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Center items vertically */
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 10px;
+    color: #818181;
+    transition: 0.3s;
+  }
+  
+  .menu-item:hover {
+    color: #f1f1f1;
+  }
+  
+  .menu-item i {
+    margin-right: 10px; /* Space between icon and text */
+  }
+  
+.pro{
+    margin-top: 90%;
+}
+.menu{
+   margin-top: 10%;
+}
+ul {
+    list-style: none; /* Remove default bullets */
+    padding-left: 0;  /* Remove default padding */
+  }
