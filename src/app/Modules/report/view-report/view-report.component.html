@@ -1,1 +1,22 @@
-<p>view-report works!</p>
+<div class="mt-4">
+    <button type="submit" class="btn btn-primary btn-block mb-3 mx-3" [routerLink]="['/main/reportpage/reportmain/reportview/income']">INCOME</button>
+    <button type="submit" class="btn btn-primary btn-block mb-3 mx-3" [routerLink]="['/main/reportpage/reportmain/reportview/expenditure']">EXPENDITURE</button>
+    <button type="submit" class="btn btn-primary btn-block mb-3" [routerLink]="['/main/reportpage/reportmain/reportview/disrepancy']">DICREPANCY</button>
+</div>
+
+<div class="row">
+    <div class="col-md-7">
+        <router-outlet></router-outlet>
+    </div>
+    <div class="col-md-5" >
+        <h1 class="text-center">PRINT SECTION</h1>
+        <div class="table-responsive ">
+            <div class="opt">
+                <button type="submit" class="btn btn-primary btn-block mb-3 mx-3">Cancel</button>
+                <button type="submit" class="btn btn-primary btn-block mb-3">Print</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+ 

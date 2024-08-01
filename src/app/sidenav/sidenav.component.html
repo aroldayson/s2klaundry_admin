@@ -1,4 +1,4 @@
-<div id="mySidenav" class="sidenav" [ngClass]="{'open': isOpen}">
+<div class="responsive" id="mySidenav" class="sidenav" [ngClass]="{'open': isOpen}">
     <div class="logo-container">
        <img src="./sk2logo.png" alt="Logo" class="logo">
     </div>
@@ -28,12 +28,12 @@
   
   
   
-  <div id="main" [ngStyle]="{'margin-left.px': isOpen ? 250 : 0}">
+  <div  class="responsive" id="main" [ngStyle]="{'margin-left.px': isOpen ? 250 : 0}">
     <span class="nav" style="font-size:25px;cursor:pointer " (click)="toggleNav()">&#9776; Dashboard</span>
     <h1 class="nav"><p style="font-size:15px;cursor:pointer;margin-left: 30px;">Welcome to Admin!!!</p></h1>
-    <div class="container mt-5 bg-white mx-5 px-5">
-      <div class="row ">
-        <div class="col-sm-12 col-md-6 col-lg-12 ">
+    <div class="container mt-5 bg-white mx-5">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-12">
           <div class="container-fluid">
             <div class="">
                 <router-outlet></router-outlet>
