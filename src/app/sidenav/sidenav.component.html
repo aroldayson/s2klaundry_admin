@@ -29,19 +29,20 @@
   
   
   <div id="main" [ngStyle]="{'margin-left.px': isOpen ? 250 : 0}">
-    <span style="font-size:30px;cursor:pointer" (click)="toggleNav()">&#9776; Dashboard</span>
-    <p class="mx-4">Welcome to Admin</p>
-    <div class="container mt-5">
-      <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-3 mb-4">
+    <span class="nav" style="font-size:25px;cursor:pointer " (click)="toggleNav()">&#9776; Dashboard</span>
+    <h1 class="nav"><p style="font-size:15px;cursor:pointer;margin-left: 30px;">Welcome to Admin!!!</p></h1>
+    <div class="container mt-5 bg-white mx-5 px-5">
+      <div class="row ">
+        <div class="col-sm-12 col-md-6 col-lg-12 ">
           <div class="container-fluid">
-            <div class="p-5">
+            <div class="">
                 <router-outlet></router-outlet>
             </div>
         </div>
         </div>
     </div>  
   </div>
+  
   
   
   
