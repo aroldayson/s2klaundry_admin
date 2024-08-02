@@ -21,4 +21,10 @@ export class SidenavComponent {
   toggleNav() {
     this.isOpen = !this.isOpen;
   }
+
+  activeLink: string = 'home';  // Default active link
+
+  setActiveLink(link: string): void {
+    this.activeLink = link;  // Set the active link
+  }
 }

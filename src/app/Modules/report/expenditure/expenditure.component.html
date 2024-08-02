@@ -3,54 +3,24 @@
     <table class="table">
         <thead>
         <tr>
-            <th>Laundry Item No.</th>
-            <th>Laundry Name</th>
-            <th>Rate</th>
-            <th>Perkilogram</th>
-            <th class="text-center">Action</th>
+            <th>Transaction No.</th>
+            <th>Customer Name</th>
+            <th>Category No.</th>
+            <th>Date</th>
+            <th>Payment</th>
+            <th>Total</th>
         </tr>
         </thead>
         <tbody>
         <tr>
             <td>LA001421</td>
-            <td>Assoreted Clothes</td>
-            <td>30 Pesos</td>
-            <td>1 kilograms</td>
-            <td class="text-center">
-                <button class="btn bg-primary mx-2">Edit</button>
-                <button class="btn bg-danger">Delete</button>
-            </td>
-        </tr>
-        <tr>
-            <td>LA001422</td>
-            <td>Maong/ Jacket</td>
-            <td>40 Pesos</td>
-            <td>1 kilograms</td>
-            <td class="text-center">
-                <button class="btn bg-primary mx-2">Edit</button>
-                <button class="btn bg-danger">Delete</button>
-            </td>
-        </tr>
-        <tr>
-            <td>LA001422</td>
-            <td>Maong/ Jacket</td>
-            <td>40 Pesos</td>
-            <td>1 kilograms</td>
-            <td class="text-center">
-                <button class="btn bg-primary mx-2">Edit</button>
-                <button class="btn bg-danger">Delete</button>
-            </td>
-        </tr>
-        <tr>
-            <td>LA001422</td>
-            <td>Maong/ Jacket</td>
-            <td>40 Pesos</td>
-            <td>1 kilograms</td>
-            <td class="text-center">
-                <button class="btn bg-primary mx-2">Edit</button>
-                <button class="btn bg-danger">Delete</button>
-            </td>
+            <td>Marie Dela Cruz</td>
+            <td>LAU123121</td>
+            <td>07/29/2024</td>
+            <td>Cash</td>
+            <td>500</td>
         </tr>
         </tbody>
     </table>
+    <button class="btn bg-success pri mb-3" [routerLink]="['/main/reportpage/reportmain/reportview/print']">Print</button>
 </div>
