@@ -1,49 +1,43 @@
-<div class="responsive" id="mySidenav" class="sidenav" [ngClass]="{'open': isOpen}">
-    <div class="logo-container">
-       <img src="./sk2logo.png" alt="Logo" class="logo">
-    </div>
-    <div class="menu">
-      <a class="menu-item nav-link active" [routerLink]="['/main/dashboardpage']">
-        <i class="fa fa-qrcode " ></i> Dashboard
-      </a>
-      <a href="#" class="menu-item"  [routerLink]="['/main/pricemanagementpage']">
-        <i class="fas fa-tags"></i> Price Management
-      </a>
-      <a href="#" class="menu-item"  [routerLink]="['/main/reportpage']">
-        <i class="fas fa-file-alt"></i> Reports 
-      </a>
-      <a href="#" class="menu-item"  [routerLink]="['/main/staffpage']">
-        <i class="fas fa-users"></i> Staff
-      </a>
-    </div>
-    <div class="pro">
-      <a href="#" class="menu-item mt-5 pt-5" [routerLink]="['/main/accountpage']">
-        <i class="fas fa-user"></i> Account
-      </a>
-      <a href="#" class="menu-item" [routerLink]="['/login']">
-        <i class="fas fa-sign-out"></i> Sign Out
-      </a>
+<!-- app.component.html -->
+<div class="navbar container-fluid sidenav" [ngClass]="{'open': isOpen}">
+  <div class="logo-container">
+    <img src="./sk2logo.png" alt="Logo" class="logo">
+  </div>
+  <div class="menu">
+    <a class="menu-item nav-link" [routerLink]="['/main/dashboardpage']" routerLinkActive="active">
+      <i class="fa fa-qrcode mx-2"></i> Dashboard
+    </a>
+    <a class="menu-item nav-link" [routerLink]="['/main/pricemanagementpage']" routerLinkActive="active">
+      <i class="fas fa-tags mx-2"></i> Price Management
+    </a>
+    <a class="menu-item nav-link" [routerLink]="['/main/reportpage']" routerLinkActive="active">
+      <i class="fas fa-file-alt mx-2"></i> Reports
+    </a>
+    <a class="menu-item nav-link" [routerLink]="['/main/staffpage']" routerLinkActive="active">
+      <i class="fas fa-users mx-2"></i> Staff
+    </a>
+  </div>
+  <div class="pro mt-5 pt-5">
+    <a class="menu-item nav-link" [routerLink]="['/main/accountpage']" routerLinkActive="active">
+      <i class="fas fa-user mx-2"></i>My Account
+    </a>
+    <a class="menu-item nav-link" [routerLink]="['/login']" routerLinkActive="active">
+      <i class="fas fa-sign-out mx-2"></i> Sign Out
+    </a>
+  </div>
+</div>
+
+<div class="main-content nav" [ngStyle]="{'margin-left.px': isOpen ? 250 : 0}">
+  <span class="nav-toggle" (click)="toggleNav()"><i class="mx-2">&#9776;</i> Welcome to Admin!!!</span>
+  <div class="container mt-2 bg-white">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="container-fluid">
+          <div class="mx-1">
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  
-  
-  
-  <div  class="responsive" id="main" [ngStyle]="{'margin-left.px': isOpen ? 250 : 0}">
-    <span class="nav" style="font-size:25px;cursor:pointer " (click)="toggleNav()">&#9776; Dashboard</span>
-    <h1 class="nav"><p style="font-size:15px;cursor:pointer;margin-left: 30px;">Welcome to Admin!!!</p></h1>
-    <div class="container mt-5 bg-white mx-5">
-      <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-12">
-          <div class="container-fluid">
-            <div class="">
-                <router-outlet></router-outlet>
-            </div>
-        </div>
-        </div>
-    </div>  
-  </div>
-  
-  
-  
-  
-  
+</div>

@@ -1,0 +1,36 @@
+.my-card
+{
+    position:absolute;
+    left:40%;
+    top:-20px;
+    border-radius:100%;
+}
+.card{
+    background-image: linear-gradient(to right top, #38b6ff, #91c4ff, #c3d5ff, #e6e9ff, #ffffff);
+    margin-bottom: 10%;
+}
+/* h4, h1{
+    color: black;
+} */
+
+
+.chart{
+    height:500px;
+    width:500px;
+}
+.pie-legend {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.pie-legend span {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	border-radius: 100%;
+	margin-right: 16px;
+	margin-bottom: -2px;
+}
+.pie-legend li {
+	margin-bottom: 10px;
+}
