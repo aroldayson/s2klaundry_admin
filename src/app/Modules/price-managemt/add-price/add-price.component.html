@@ -1,25 +1,27 @@
-<h1>ADD CATEGORY</h1>
-<div class="table-responsive ">
-    <div class="form-outline mb-2">
-        <input type="text" id="form7Example1" class="form-control" />
-        <label class="form-label" for="form7Example1">Laundry Name</label>
-    </div>
-    
-    <div class="form-outline mb-2">
-        <input type="number" id="form7Example2" class="form-control" />
-        <label class="form-label" for="form7Example2">Rate</label>
-    </div>
-
-    <div class="form-outline mb-2">
-        <input type="number" id="form7Example2" class="form-control" />
-        <label class="form-label" for="form7Example2">Kilograms</label>
-    </div>
-    <div class="row opt">
-        <div class="col-md-6">
-            <button type="submit" class="btn btn-primary btn-block mb-3" [routerLink]="['/main/pricemanagementpage/pricemgtmain/pricemgtview']">Cancel</button>
+<div class="bg-white p-3">
+    <h1>ADD CATEGORY</h1>
+    <div class="table-responsive">
+        <div class="form-outline mb-2">
+            <input type="text" id="form7Example1" class="form-control" />
+            <label class="form-label" for="form7Example1">Laundry Name</label>
         </div>
-        <div class="col-md-6">
-            <button type="submit" class="btn btn-primary btn-block mb-3">Save</button>
+        
+        <div class="form-outline mb-2">
+            <input type="number" id="form7Example2" class="form-control" />
+            <label class="form-label" for="form7Example2">Rate</label>
+        </div>
+    
+        <div class="form-outline mb-2">
+            <input type="number" id="form7Example2" class="form-control" />
+            <label class="form-label" for="form7Example2">Kilograms</label>
+        </div>
+        <div class="row opt">
+            <div class="col-md-6">
+                <button type="submit" class="btn btn-primary btn-block mb-3 mx-1" [routerLink]="['/main/pricemanagementpage/pricemgtmain/pricemgtview']">Cancel</button>
+            </div>
+            <div class="col-md-6">
+                <button type="submit" class="btn btn-primary btn-block mb-3" (click)="save()">Save</button>
+            </div>
         </div>
     </div>
 </div>
