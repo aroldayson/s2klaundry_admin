@@ -14,11 +14,12 @@ export const reportRoute: Routes = [
                     {path: 'income', component: IncomeComponent},
                     {path: 'expenditure', component: ExpenditureComponent},
                     {path: 'disrepancy', component: DicrepancyComponent},
-                    {path: 'print', component: PrintComponent},
+                    // {path: 'print', component: PrintComponent},
                     {path: '', redirectTo: 'income', pathMatch: 'full'}
                 ]
             },
             {path: '', redirectTo: 'reportview', pathMatch: 'full'}
         ]},
+    {path: 'print', component: PrintComponent},
     {path: '', redirectTo: 'reportmain', pathMatch:'full'}
 ];
