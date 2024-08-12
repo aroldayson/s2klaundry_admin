@@ -100,3 +100,10 @@
     margin-left: 0;
   }
 }
+.text-responsive {
+  font-size: calc(.90rem + 0.5vw);
+}
+
+.text-label {
+  font-size: calc(0.9rem + 0.3vw);
+}
