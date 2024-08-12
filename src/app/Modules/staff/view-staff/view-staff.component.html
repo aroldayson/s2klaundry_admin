@@ -11,7 +11,7 @@
                     <th>Address</th>
                     <th>Phone No.</th>
                     <th>Email</th>
-                    <th class="text-center">Action</th>
+                    <th class="text-center fixed-action-column">Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -19,13 +19,19 @@
                     <td>LA001421</td>
                     <td>IMG.jpg</td>
                     <td>Marie Dela Cruz</td>
-                    <td>Artacho,Sison</td>
+                    <td>Artacho, Sison</td>
                     <td>09123456789</td>
                     <td>marie.gmail.com</td>
-                    <td class="text-center">
-                        <button class="btn bg-primary m-1" [routerLink]="['/main/staffpage/staffmain/staffview/update']"><i class='fas fa-pencil-alt'></i></button>
-                        <button class="btn bg-danger m-1"><i class="fa fa-trash-o" (click)="dltbtn()"></i></button>
-                        <button class="btn bg-success m-1" [routerLink]="['/main/staffpage/staffmain/staffview/upload']" ><i class="fa fa-upload"></i></button>
+                    <td class="text-center fixed-action-column">
+                        <button class="btn btn-primary m-1 btn-custom-sm btn-custom-md btn-custom-lg" [routerLink]="['/main/staffpage/staffmain/staffview/update']">
+                            <i class='fas fa-pencil-alt'></i>
+                        </button>
+                        <button class="btn bg-danger m-1 btn-custom-sm btn-custom-md btn-custom-lg">
+                            <i class="fa fa-trash-o" (click)="dltbtn()"></i>
+                        </button>
+                        <button class="btn bg-success m-1 btn-custom-sm btn-custom-md btn-custom-lg" [routerLink]="['/main/staffpage/staffmain/staffview/upload']">
+                            <i class="fa fa-upload"></i>
+                        </button>
                     </td>
                 </tr>
               </tbody>
