@@ -11,7 +11,11 @@ export const reportRoute: Routes = [
         children: [
             {path: 'reportview', component:ViewReportComponent,
                 children: [
-                    {path: 'income', component: IncomeComponent},
+                    {path: 'income', component: IncomeComponent,
+                        children: [
+                            {path: 'print', component: PrintComponent}
+                        ]
+                    },
                     {path: 'expenditure', component: ExpenditureComponent},
                     {path: 'disrepancy', component: DicrepancyComponent},
                     // {path: 'print', component: PrintComponent},

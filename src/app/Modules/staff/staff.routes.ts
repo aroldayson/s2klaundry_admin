@@ -13,7 +13,7 @@ export const staffRoute: Routes = [
                     {path: 'addstaff', component:AddStaffComponent},
                     {path: 'upload',component:UploadStaffComponent},
                     {path: 'update', component:UpdateStaffComponent},
-                    {path: '', redirectTo: '', pathMatch: 'full'}
+                    {path: '', redirectTo: 'addstaff', pathMatch: 'full'}
                 ]
             },
             {path: '', redirectTo: 'staffview', pathMatch: 'full'}

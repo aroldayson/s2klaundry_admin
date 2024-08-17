@@ -1,26 +1,67 @@
-<h1>LIST OF EXPENDITURE</h1>
-<div class="table-responsive">
-    <table class="table">
-        <thead>
-        <tr>
-            <th>Transaction No.</th>
-            <th>Customer Name</th>
-            <th>Category No.</th>
-            <th>Date</th>
-            <th>Payment</th>
-            <th>Total</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>LA001421</td>
-            <td>Marie Dela Cruz</td>
-            <td>LAU123121</td>
-            <td>07/29/2024</td>
-            <td>Cash</td>
-            <td>500</td>
-        </tr>
-        </tbody>
-    </table>
-    <button class="btn bg-success pri mb-3" [routerLink]="['/main/reportpage/print']"><i class='fas fa-print'></i></button>
+<div class="container"  id="print-section">
+    <div class="row">
+        <div class="col-md-4 mt-4">
+            <h3>LIST OF EXPENDITURE</h3>
+        </div>
+        <div class="col-md-2 mt-2">
+            <div class="form-group has-feedback">
+                <span class="glyphicon glyphicon-search form-control-feedback">To:</span>
+                <input type="date" class="form-control" name="search" id="search" placeholder="search">
+            </div>
+        </div>
+        <div class="col-md-2 mt-2">
+            <div class="form-group has-feedback">
+                <span class="glyphicon glyphicon-search form-control-feedback">End:</span>
+                <input type="date" class="form-control" name="search" id="search" placeholder="search">
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-10">
+            <div class="table-responsive" >
+                <table class="table" >
+                    <thead>
+                    <tr class="text-center">
+                        <th>Date</th>
+                        <th>Order Receipt</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Total Purchased</th>
+                        <th>Balance</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="text-center">
+                        <td>07/18/2024</td>
+                        <td>096SDFS172883</td>
+                        <td>Xorox,Surt Powder</td>
+                        <td>₱ 500</td>
+                        <td class="text-danger">- ₱ 270</td>
+                        <td class="text-success">₱ 230</td>
+                    </tr>
+                    <tr class="text-center">
+                        <td>07/19/2024</td>
+                        <td>076SGD172883</td>
+                        <td>Xorox</td>
+                        <td>₱ 100</td>
+                        <td class="text-danger">- ₱ 70</td>
+                        <td class="text-success">₱ 30</td>
+                    </tr>
+                    </tbody>
+                    <tfoot class="text-center">
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th>TOTAL</th>
+                            <th id="total-amount">₱ 600</th>
+                            <th id="total-amount" class="text-danger">- ₱ 340</th>
+                            <th id="total-amount" class="text-success">₱ 260</th>
+                        </tr>
+                        </tfoot>
+                </table>
+                <button class="btn bg-success pri mb-3" [useExistingCss]="true" printSectionId="print-section" ngxPrint><i class='fas fa-print'></i></button>
+            </div>
+        </div>
+    </div>
 </div>

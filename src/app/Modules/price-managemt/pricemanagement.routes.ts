@@ -11,7 +11,7 @@ export const pricemanagementRoute: Routes = [
                 children: [
                     {path: 'add', component: AddPriceComponent},
                     {path: 'update', component: UpdatePriceComponent},
-                    {path: '', redirectTo: '', pathMatch: 'full'}
+                    {path: '', redirectTo: 'add', pathMatch: 'full'}
                 ]
             },
             {path: '', redirectTo: 'pricemgtview', pathMatch: 'full'}

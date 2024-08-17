@@ -6,7 +6,7 @@
     border-radius:100%;
 }
 .card{
-    background-image: linear-gradient(to right top, #38b6ff, #91c4ff, #c3d5ff, #e6e9ff, #ffffff);
+    /* background-image: linear-gradient(to right top, #38b6ff, #91c4ff, #c3d5ff, #e6e9ff, #ffffff); */
     margin-bottom: 10%;
 }
 /* h4, h1{
@@ -47,7 +47,7 @@
 }
 
 canvas {
-    display: block;
+    /* display: block; */
     max-width: 100%;
     max-height: 100%;
     height: auto;
@@ -63,22 +63,34 @@ canvas {
 thead th:last-child
 {
     border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    /* border-bottom-right-radius: 10px; */
 }
 thead th:first-child
 {
     border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    /* border-bottom-left-radius: 10px; */
 }
-tbody td:last-child
-{
-    border-top-right-radius: 10px;
+/* tbody tr:last-child td:last-child {
     border-bottom-right-radius: 10px;
 }
-tbody td:first-child
+
+tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+} */
+tfoot th:last-child
 {
-    border-top-left-radius: 10px;
+    /* border-top-right-radius: 10px; */
+    border-bottom-right-radius: 10px;
+}
+tfoot th:first-child
+{
+    /* border-top-left-radius: 10px; */
     border-bottom-left-radius: 10px;
 }
-
-  
+th{
+    background-color: #38b6ff;
+}
+.container{
+    background-color: #ebeef1;
+    border-radius: 2%;
+}
