@@ -1,123 +1,166 @@
-<div class="row w-100 mt-5">
-    <div class="col-md">
-        <div class="card mx-sm-1 p-3">
-            <div class="card border-black shadow text-black p-3 my-card" ><span class="fa fa-car" aria-hidden="true"></span></div>
-            <div class="text-black text-center mt-3"><h4>Today's <br>Income</h4></div>
-            <div class="text-black text-center mt-2"><h1>₱ 200.00</h1></div>
+<!-- <div class="row w-100 mt-5 ">
+    <div class="col-md-6">
+        <div class="cards border-black shadow p-3 mt-1 mb-5">
+            <div class="table-responsive mt-3">
+              <h1 class="text-responsive">Received Payment</h1>
+              <h1 class="text-responsive">Aug 15, 2024</h1>
+                <table class="table rounded-table mt-3">
+                    <thead class="text-center">
+                    <tr>
+                        <th>Method</th>
+                        <th>Amount</th>
+                    </tr>
+                    </thead>
+                    <tbody class="text-center">
+                    <tr>
+                        <td>GCash</td>
+                        <td>1000</td>
+                    </tr>
+                    <tr>
+                        <td>BPI</td>
+                        <td>550</td>
+                    </tr>
+                    <tr>
+                        <td>Cash</td>
+                        <td>850</td>
+                    </tr>
+                  </tbody>
+                  <tfoot class="text-center">
+                <tr>
+                    <th>Total</th>
+                    <th id="total-amount">2400</th>
+                </tr>
+            </tfoot>
+                </table>
+            </div>
         </div>
     </div>
-    <div class="col-md">
-        <div class="card mx-sm-1 p-3">
-            <div class="card border-black shadow text-black p-3 my-card"><span class="fa fa-eye" aria-hidden="true"></span></div>
-            <div class="text-center mt-3"><h4>Today's Received Transactions</h4></div>
-            <div class=" text-center mt-2"><h1>5</h1></div>
+    <div class="col-md-3 shadow">
+        <div class="text-black text-center ">
+            <h4 class="mt-2">DAILY INCOME </h4>
         </div>
-    </div>
-    <div class="col-md">
-        <div class="card  mx-sm-1 p-3">
-            <div class="card border-black shadow text-black p-3 my-card" ><span class="fa fa-heart" aria-hidden="true"></span></div>
-            <div class="text-black text-center mt-3"><h4>Today's <br> Expenses</h4></div>
-            <div class="text-black text-center mt-2"><h1>₱ 50.00</h1></div>
-        </div>
-    </div>
-    <div class="col-md">
-        <div class="card  mx-sm-1 p-3">
-            <div class="card border-black shadow text-black p-3 my-card" ><span class="fa fa-inbox" aria-hidden="true"></span></div>
-            <div class="text-black text-center mt-3"><h4><br>Staff </h4></div>
-            <div class="text-black text-center mt-2"><h1>3</h1></div>
-        </div>
-    </div>
-</div>
-<div class="row">
-  <div class="col-md-8">
-    <div class="cards border-black shadow text-black p-3 mt-1 mb-5">
-      <div class="table-responsive">
-        <h1 class="text-responsive">LIST OT TRANSACTIONS</h1>
-          <table class="table rounded-table">
-              <thead>
-              <tr class="text-center">
-                  <th>Tracking No.</th>
-                  <th>Customer Name</th>
-                  <th>Address</th>
-                  <th>Laundry Status</th>
-                  <th>Mode of Payment </th>
-                  <th>Staff In-Charge</th>
-                  <th>Action</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                  <td>LA001421</td>
-                  <td>Marie Dela Cruz</td>
-                  <td>Artacho, Sison</td>
-                  <td>Pending</td>
-                  <td>Cash</td>
-                  <td>Luna Juan</td>
-                  <td> <button class="btn bg-success"><i class="fa fa-eye-slash"></i> </button></td>
-              </tr>
-              <tr>
-                <td>LA001421</td>
-                <td>Marie Dela Cruz</td>
-                <td>Artacho, Sison</td>
-                <td>Pending</td>
-                <td>Cash</td>
-                <td>Luna Juan</td>
-                <td> <button class="btn bg-success"><i class="fa fa-eye-slash"></i> </button></td>
-              </tr>
-              <tr>
-                <td>LA001421</td>
-                <td>Marie Dela Cruz</td>
-                <td>Artacho, Sison</td>
-                <td>Pending</td>
-                <td>Cash</td>
-                <td>Luna Juan</td>
-                <td><button class="btn bg-success"><i class="fa fa-eye-slash"></i> </button></td>
-              </tr>
-            </tbody>
-          </table>
-      </div>
-    </div>
-  </div>
-    <div class="col-md-4">
-      <div class="card mx-sm-1">
-        <div class="text-black text-center">
-            <h4 class="mt-2">Income Graph</h4>
-        </div>
-        <div class="card-body p-0">
+        <div class="card-body p-0" style="height: 400px;"> 
             <div class="chart-container" style="position: relative; height: 100%; width: 100%;">
                 <canvas id="MyChart" class="text-responsive"></canvas>
             </div>
         </div>
-      </div>
-      <div class="card  mx-sm-1 p-3">
-        <h1 class="text-responsive">Cash Details</h1>
+    </div>    
+    <div class="col-md-3 ">
+        <div class="card  mx-sm-1 p-3">
+            <h1 class="text-responsive">Cash Details</h1>
+            <div class="container">
+              <div class="row mb-3">
+                  <div class="col-md-7">
+                      <label class="form-label text-label" for="changeFundInput">Initial Amount</label>
+                      <input type="text" id="changeFundInput" class="form-control" />
+                  </div>
+                  <div class="col-md-5 text-center d-flex align-items-end">
+                      <div class="w-100">
+                          <label class="form-label text-label d-none d-md-block" for="changeFundInput">Update</label>
+                          <button type="submit" class="btn btn-primary w-100"><i class="fa fa-pencil"></i></button>
+                      </div>
+                  </div>
+              </div>
+          
+              <div class="row mb-3">
+                  <div class="col-12 col-md-7">
+                      <label class="form-label text-label" for="cashCountInput">Cash Count</label>
+                      <input type="text" id="cashCountInput" class="form-control" />
+                  </div>
+                  <div class="col-12 col-md-5 text-center d-flex align-items-end">
+                      <div class="w-100">
+                          <label class="form-label text-label d-none d-md-block" for="cashCountInput">Add</label>
+                          <button type="submit" class="btn btn-primary w-100"><i class="fa fa-plus-circle"></i></button>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div> -->
+<div class="row mt-5">
+    <div class="col-md-9">
         <div class="container">
-          <div class="row mb-3">
-              <div class="col-md-9">
-                  <label class="form-label text-label" for="changeFundInput">Change Fund</label>
-                  <input type="text" id="changeFundInput" class="form-control" />
-              </div>
-              <div class="col-md-3 text-center d-flex align-items-end">
-                  <div class="w-100">
-                      <label class="form-label text-label d-none d-md-block" for="changeFundInput">Update</label>
-                      <button type="submit" class="btn btn-primary w-100"><i class="fa fa-pencil"></i></button>
-                  </div>
-              </div>
-          </div>
-      
-          <div class="row mb-3">
-              <div class="col-12 col-md-9">
-                  <label class="form-label text-label" for="cashCountInput">Cash Count</label>
-                  <input type="text" id="cashCountInput" class="form-control" />
-              </div>
-              <div class="col-12 col-md-3 text-center d-flex align-items-end">
-                  <div class="w-100">
-                      <label class="form-label text-label d-none d-md-block" for="cashCountInput">Add</label>
-                      <button type="submit" class="btn btn-primary w-100"><i class="fa fa-plus-circle"></i></button>
-                  </div>
-              </div>
-          </div>
+            <div class="row">
+                <div class="col-md-7 mt-3 mx-3">
+                    <div class="cards border-black shadow p-3 mt-1 mb-5">
+                        <div class="table-responsive mt-3 text-center">
+                          <h1 class="text-responsive">Received Payment</h1>
+                          <h1 class="text-responsive">{{ currentDate }}</h1>
+                            <table class="table rounded-table mt-3">
+                                <thead class="text-center">
+                                <tr>
+                                    <th>Mode of Payment</th>
+                                    <th>Amount</th>
+                                </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                <tr>
+                                    <td class="text-primary">GCash</td>
+                                    <td>₱ 1000</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-danger">BPI</td>
+                                    <td>₱ 550</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-success">Cash</td>
+                                    <td>₱ 850</td>
+                                </tr>
+                              </tbody>
+                              <tfoot class="text-center">
+                                <tr>
+                                    <th>Total</th>
+                                    <th id="total-amount">₱ 2400</th>
+                                </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 shadow mt-3 mb-3">
+                    <div class="text-black  text-center ">
+                        <h4 class="mt-2">INCOME </h4>
+                    </div>
+                    <div class="card-body p-0" style="height: 400px;"> 
+                        <div class="chart-container" style="position: relative; height: 100%; width: 100%;">
+                            <canvas id="MyChart" class="text-responsive"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </div>
+    <div class="col-md-3 ">
+        <div class="card  mx-sm-1 p-3">
+            <h1 class="text-responsive">Cash Details</h1>
+            <div class="container">
+              <div class="row mb-3">
+                  <div class="col-md-7">
+                      <label class="form-label text-label" for="changeFundInput">Initial Amount</label>
+                      <input type="text" id="changeFundInput" class="form-control" />
+                  </div>
+                  <div class="col-md-5 text-center d-flex align-items-end">
+                      <div class="w-100">
+                          <label class="form-label text-label d-none d-md-block" for="changeFundInput">Update</label>
+                          <button type="submit" class="btn btn-primary w-100"><i class="fa fa-pencil"></i></button>
+                      </div>
+                  </div>
+              </div>
+          
+              <div class="row mb-3">
+                  <div class="col-12 col-md-7">
+                      <label class="form-label text-label" for="cashCountInput">Cash Count</label>
+                      <input type="text" id="cashCountInput" class="form-control" />
+                  </div>
+                  <div class="col-12 col-md-5 text-center d-flex align-items-end">
+                      <div class="w-100">
+                          <label class="form-label text-label d-none d-md-block" for="cashCountInput">Add</label>
+                          <button type="submit" class="btn btn-primary w-100"><i class="fa fa-plus-circle"></i></button>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
     </div>
 </div>

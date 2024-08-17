@@ -21,6 +21,7 @@
     "@angular/platform-server": "^18.1.0",
     "@angular/router": "^18.1.0",
     "@angular/ssr": "^18.1.1",
+    "admin": "file:",
     "apexcharts": "^3.52.0",
     "bootstrap": "^5.3.3",
     "chart.js": "^4.4.3",
