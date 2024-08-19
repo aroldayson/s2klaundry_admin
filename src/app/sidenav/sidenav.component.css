@@ -6,7 +6,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #38b6ff;
+  /* background-color: #38b6ff; */
+  background-color: #fcfcfc;
   padding-top: 20px;
   transition: width 0.3s;
 }
@@ -47,8 +48,8 @@
 }
 
 .sidenav .menu-item:hover, .sidenav .menu-item.active {
-  color: #f1f1f1;
-  border-bottom: 3px solid #f1f1f1;
+  color: #38b6ff;
+  border-bottom: 3px solid #38b6ff;
 }
 
 .sidenav .pro {
