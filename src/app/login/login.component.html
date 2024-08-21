@@ -1,2 +1,74 @@
-<p>login works!</p>
-hahahah
+<section>
+  <div class="login">
+    <div class="container d-flex justify-content-center align-items-center">
+      <div class="card">
+        <div class="card-body">
+          <div class="logo text-center">
+            <img src="./sk2logo.png" alt="Logo" />
+          </div>
+          <div class="h3 fw-bold text-center mb-4 text-primary">
+            ADMIN LOGIN
+          </div>
+          <form>
+            <div class="mb-3">
+              <label for="validationDefault01" class="form-label"
+                >Email address</label
+              >
+              <input
+                type="text"
+                id="validationDefault01"
+                class="form-control form-control-lg"
+                formControlName="email"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="typePasswordX" class="form-label">Password</label>
+              <input
+                type="password"
+                id="typePasswordX"
+                class="form-control form-control-lg"
+                formControlName="pw"
+              />
+            </div>
+            <p class="small pb-lg-2">
+              <a href="#" class="text-black-50">Forgot password?</a>
+            </p>
+            <div class="mt-3 text-end">
+              <button class="btn btn-primary" routerLink="/main">LOGIN</button>
+            </div>
+          </form>
+
+          <!-- FIRST MODAL -->
+          <div class="modal" tabindex="-1" id="warningmodal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title text-danger fw-bolder">WARNING!!!</h3>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p class="text-dark h5">Please fill the form correctly!</p>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end modal -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
