@@ -1,19 +1,21 @@
+/* General Sidenav Styling */
 .sidenav {
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   height: 100%;
   width: 250px;
   position: fixed;
   top: 0;
   left: 0;
-  /* background-color: #38b6ff; */
-  background-color: #fcfcfc;
+  background-color: #f0f4f8;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   padding-top: 20px;
-  transition: width 0.3s;
+  transition: width 0.3s ease, box-shadow 0.3s ease;
 }
 
 .sidenav.open {
   width: 250px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .sidenav:not(.open) {
@@ -21,6 +23,7 @@
   overflow: hidden;
 }
 
+/* Logo Styling */
 .sidenav .logo-container {
   display: flex;
   justify-content: center;
@@ -29,83 +32,103 @@
 }
 
 .sidenav .logo {
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
 }
 
+/* Sidenav container */
 .sidenav .menu {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the menu items as a group */
+  justify-content: center; /* Center the menu items as a group */
 }
 
+/* Menu items styling */
 .sidenav .menu-item {
   padding: 15px;
   text-decoration: none;
-  font-size: 20px;
-  color: #000000;
+  font-size: 18px;
+  color: #333;
   display: flex;
   align-items: center;
-  transition: color 0.3s, border-bottom 0.3s;
+  justify-content: flex-start; /* Keeps the text left-aligned within the item */
+  width: 100%; /* Ensures the item takes the full width */
+  transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.sidenav .menu-item:hover, .sidenav .menu-item.active {
-  color: #38b6ff;
-  border-bottom: 3px solid #38b6ff;
+/* Styling for hovered or active menu items */
+.sidenav .menu-item:hover,
+.sidenav .menu-item.active {
+  color: #ffffff;
+  background-color: #38b6ff;
+  box-shadow: inset 4px 0 0 #2a94d6;
+  border-radius: 5px;
 }
 
+/* Footer Menu Styling (My Account and Sign Out) */
 .sidenav .pro {
-  margin-top: auto;
+  margin-top: auto; /* Pushes this section to the bottom */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the items as a group */
+  width: 100%; /* Full width for alignment consistency */
 }
 
 .sidenav .pro .menu-item {
   padding: 15px;
-  /* text-decoration: none; */
-  font-size: 20px;
-  color: #000000;
+  font-size: 18px;
+  color: #333;
   display: flex;
   align-items: center;
-  transition: color 0.3s, border-bottom 0.3s;
+  justify-content: flex-start; /* Align text to the left */
+  width: 100%; /* Full width to match other menu items */
+  transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.sidenav .pro .menu-item:hover, .sidenav .pro .menu-item.active {
-  color: #f1f1f1;
-  border-bottom: 3px solid #f1f1f1;
-  /* background-color: #fdf4f4; */
+/* Styling for hovered or active items in the footer menu */
+.sidenav .pro .menu-item:hover,
+.sidenav .pro .menu-item.active {
+  color: #ffffff;
+  background-color: #f25252;
+  box-shadow: inset 4px 0 0 #d14242;
+  border-radius: 5px;
 }
 
+/* Main Content Styling */
 .main-content {
-  transition: margin-left 0.3s;
-  /* padding: 0px; */
+  transition: margin-left 0.3s ease;
+  padding: 10px;
 }
-/* .nav {
-  padding-left: 30px;
-  padding-top: 10px;
-  background-color: rgb(255, 255, 255);
-} */
+
+/* Navbar Header Styling */
+.navbar-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #38b6ff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
 .nav-toggle {
-  font-size: 25px;
   cursor: pointer;
-  width: 100%;
-  padding: 10px;
-  background-color: rgb(255, 255, 255);
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-right: 20px;
 }
+
+.nav-title {
+  flex-grow: 1;
+  text-align: center;
+  color: #ffffff;
+  font-size: calc(1rem + 1vw);
+}
+
+/* Responsive design adjustments */
 @media screen and (max-width: 768px) {
-  .sidenav {
-    width: 0;
+  .text-responsive {
+    font-size: calc(1rem + 1.5vw);
   }
-
-  .sidenav.open {
-    width: 250px;
-  }
-
-  .main-content {
-    margin-left: 0;
-  }
-}
-.text-responsive {
-  font-size: calc(.90rem + 0.5vw);
-}
-
-.text-label {
-  font-size: calc(0.9rem + 0.3vw);
 }
