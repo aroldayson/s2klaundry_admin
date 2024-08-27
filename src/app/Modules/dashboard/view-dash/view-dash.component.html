@@ -53,33 +53,40 @@
     </div>
     <div class="col-md-3 ">
         <div class="card  mx-sm-1 p-3">
-            <h1 class="text-responsive">Cash Details</h1>
+            <h1 class="text-responsive text-center mb-3">Cash Details</h1>
             <div class="container">
-              <div class="row mb-3">
-                  <div class="col-md-7">
-                      <label class="form-label text-label" for="changeFundInput">Initial Amount</label>
-                      <input type="text" id="changeFundInput" class="form-control" />
-                  </div>
-                  <div class="col-md-5 text-center d-flex align-items-end">
-                      <div class="w-100">
-                          <label class="form-label text-label d-none d-md-block" for="changeFundInput">Update</label>
-                          <button type="submit" class="btn btn-primary w-100"><i class="fa fa-pencil"></i></button>
-                      </div>
-                  </div>
-              </div>
-          
-              <div class="row mb-3">
-                  <div class="col-12 col-md-7">
-                      <label class="form-label text-label" for="cashCountInput">Cash Count</label>
-                      <input type="text" id="cashCountInput" class="form-control" />
-                  </div>
-                  <div class="col-12 col-md-5 text-center d-flex align-items-end">
-                      <div class="w-100">
-                          <label class="form-label text-label d-none d-md-block" for="cashCountInput">Add</label>
-                          <button type="submit" class="btn btn-primary w-100"><i class="fa fa-plus-circle"></i></button>
-                      </div>
-                  </div>
-              </div>
+                <div class="row mb-4">
+                    <!-- Initial Amount Input -->
+                    <div class="col-12 col-md-9">
+                        <label class="form-label text-label fw-bold" for="changeFundInput">Initial Amount</label>
+                        <input type="text" id="changeFundInput" class="form-control shadow-sm border-0 rounded" placeholder="Enter initial amount" />
+                    </div>
+                    <div class="col-12 col-md-3 text-center d-flex align-items-end mt-2 mt-md-0">
+                        <div class="w-100">
+                            <!-- Button for Update Action -->
+                            <button type="button" class="btn btn-primary w-100 shadow-sm">
+                                <i class="fa fa-pencil me-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mb-4">
+                    <!-- Cash Count Input -->
+                    <div class="col-12 col-md-9">
+                        <label class="form-label text-label fw-bold" for="cashCountInput">Cash Count</label>
+                        <input type="text" id="cashCountInput" class="form-control shadow-sm border-0 rounded" placeholder="Enter cash count" />
+                    </div>
+                    <div class="col-12 col-md-3 text-center d-flex align-items-end mt-2 mt-md-0">
+                        <div class="w-100">
+                            <!-- Button for Add Action -->
+                            <button type="button" class="btn btn-success w-100 shadow-sm">
+                                <i class="fa fa-plus-circle me-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
           </div>
     </div>

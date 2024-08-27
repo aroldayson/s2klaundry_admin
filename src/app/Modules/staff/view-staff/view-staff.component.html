@@ -24,15 +24,15 @@
                     <td>09123456789</td>
                     <td>marie.gmail.com</td>
                     <td class="text-center fixed-action-column">
-                        <button class="btn btn-primary m-1 btn-custom-sm btn-custom-md btn-custom-lg" [routerLink]="['/main/staffpage/staffmain/staffview/update']">
-                            <i class='fas fa-pencil-alt'></i>
-                        </button>
-                        <button class="btn bg-danger m-1 btn-custom-sm btn-custom-md btn-custom-lg">
-                            <i class="fa fa-trash-o" (click)="dltbtn()"></i>
-                        </button>
-                        <button class="btn bg-success m-1 btn-custom-sm btn-custom-md btn-custom-lg" [routerLink]="['/main/staffpage/staffmain/staffview/upload']">
-                            <i class="fa fa-upload"></i>
-                        </button>
+                        <!-- <button class="btn btn-primary m-1 btn-custom-sm btn-custom-md btn-custom-lg" [routerLink]="['/main/staffpage/staffmain/staffview/update']"> -->
+                            <i class='fas fa-pencil-alt p-1' [routerLink]="['/main/staffpage/staffmain/staffview/update']"></i>
+                        <!-- </button> -->
+                        <!-- <button class="btn bg-danger m-1 btn-custom-sm btn-custom-md btn-custom-lg"> -->
+                            <i class="fa fa-trash-o p-1" (click)="dltbtn()"></i>
+                        <!-- </button> -->
+                        <!-- <button class="btn bg-success m-1 btn-custom-sm btn-custom-md btn-custom-lg" [routerLink]="['/main/staffpage/staffmain/staffview/upload']"> -->
+                            <i class="fa fa-upload p-1" [routerLink]="['/main/staffpage/staffmain/staffview/upload']"></i>
+                        <!-- </button> -->
                     </td>
                 </tr>
               </tbody>
