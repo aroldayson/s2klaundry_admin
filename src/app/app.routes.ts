@@ -29,9 +29,10 @@ export const routes: Routes = [
             {
                 path: 'accountpage',
                 loadChildren: () => import('./Modules/account/account.routes').then(r=>accountRoute)
-            }
+            },
+            {path: '', redirectTo: 'dashboardpage', pathMatch: 'full'}
         ]
     },
     {path: 'login', component: LoginComponent},
-    {path: '', redirectTo: 'main', pathMatch: 'full'}
+    {path: '', redirectTo: 'login', pathMatch: 'full'}
 ];

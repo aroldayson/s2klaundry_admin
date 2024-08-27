@@ -1,0 +1,96 @@
+.my-card
+{
+    position:absolute;
+    left:45%;
+    top:-20px;
+    border-radius:100%;
+}
+.card{
+    /* background-image: linear-gradient(to right top, #38b6ff, #91c4ff, #c3d5ff, #e6e9ff, #ffffff); */
+    margin-bottom: 10%;
+}
+/* h4, h1{
+    color: black;
+} */
+
+
+.chart{
+    height:500px;
+    width:500px;
+}
+.pie-legend {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.pie-legend span {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	border-radius: 100%;
+	margin-right: 16px;
+	margin-bottom: -2px;
+}
+.pie-legend li {
+	margin-bottom: 10px;
+}
+.text-responsive {
+    font-size: calc(1rem + 0.5vw);
+}
+
+.text-label {
+    font-size: calc(0.8rem + 0.3vw);
+}
+.chart-container {
+    width: 100%;
+    height: 100%;
+}
+
+canvas {
+    /* display: block; */
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+}
+
+
+/* .table th:last-child,
+.table td:last-child {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+} */
+thead th:last-child
+{
+    border-top-right-radius: 10px;
+    /* border-bottom-right-radius: 10px; */
+}
+thead th:first-child
+{
+    border-top-left-radius: 10px;
+    /* border-bottom-left-radius: 10px; */
+}
+/* tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+} */
+tfoot th:last-child
+{
+    /* border-top-right-radius: 10px; */
+    border-bottom-right-radius: 10px;
+}
+tfoot th:first-child
+{
+    /* border-top-left-radius: 10px; */
+    border-bottom-left-radius: 10px;
+}
+th{
+    background-color: #38b6ff;
+}
+.container{
+    background-color: #ebeef1;
+    border-radius: 2%;
+}

@@ -10,15 +10,9 @@ import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
   styleUrl: './sidenav.component.css'
 })
 export class SidenavComponent {
-  isOpen = false;
-  open = false;
-  openNav() {
-    this.isOpen = true;
-  }
-  closeNav() {
-    this.isOpen = false;
-  }
-  toggleNav() {
+  isOpen: boolean = true;
+
+  toggleNav(): void {
     this.isOpen = !this.isOpen;
   }
 }

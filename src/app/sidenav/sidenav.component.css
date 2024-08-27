@@ -1,105 +1,134 @@
-body {
-    font-family: "Lato", sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
+/* General Sidenav Styling */
 .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #38b6ff;
-    overflow-x: hidden;
-    transition: 0.5s;
-    /* padding-top: 60px; */
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #010101;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-#main {
-    transition: margin-left .5s;
-    padding-left: 40px;
-    padding-top: 20px;
-}
-
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #f0f4f8;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
+  transition: width 0.3s ease, box-shadow 0.3s ease;
 }
 
 .sidenav.open {
-    width: 280px;
+  width: 250px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.my-card
-{
-    width: 80px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    font-size: 2rem; /* Adjust as needed */
+.sidenav:not(.open) {
+  width: 0;
+  overflow: hidden;
 }
 
-.logo-container {
-    display: flex;
-    justify-content: center; /* Center the logo horizontally */
-    padding: 10px; /* Add some padding around the logo if needed */
-  }
-  
-  .logo {
-    max-width: 70%; /* Ensure the logo scales down on smaller screens */
-    height: auto; /* Maintain the aspect ratio */
-  }
-  
-  .menu-item {
-    display: flex; /* Align items horizontally */
-    align-items: center; /* Center items vertically */
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 10px;
-    color: #818181;
-    transition: 0.3s;
-  }
-  
-  .menu-item:hover {
-    color: #f1f1f1;
-  }
-  
-  .menu-item i {
-    margin-right: 10px; /* Space between icon and text */
-  }
-  
-.pro{
-    margin-top: 90%;
+/* Logo Styling */
+.sidenav .logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
-.menu{
-   margin-top: 10%;
+
+.sidenav .logo {
+  max-width: 80%;
+  height: auto;
 }
-ul {
-    list-style: none; /* Remove default bullets */
-    padding-left: 0;  /* Remove default padding */
+
+/* Sidenav container */
+.sidenav .menu {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the menu items as a group */
+  justify-content: center; /* Center the menu items as a group */
+}
+
+/* Menu items styling */
+.sidenav .menu-item {
+  padding: 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Keeps the text left-aligned within the item */
+  width: 100%; /* Ensures the item takes the full width */
+  transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Styling for hovered or active menu items */
+.sidenav .menu-item:hover,
+.sidenav .menu-item.active {
+  color: #ffffff;
+  background-color: #38b6ff;
+  box-shadow: inset 4px 0 0 #2a94d6;
+  border-radius: 5px;
+}
+
+/* Footer Menu Styling (My Account and Sign Out) */
+.sidenav .pro {
+  margin-top: auto; /* Pushes this section to the bottom */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the items as a group */
+  width: 100%; /* Full width for alignment consistency */
+}
+
+.sidenav .pro .menu-item {
+  padding: 15px;
+  font-size: 18px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align text to the left */
+  width: 100%; /* Full width to match other menu items */
+  transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Styling for hovered or active items in the footer menu */
+.sidenav .pro .menu-item:hover,
+.sidenav .pro .menu-item.active {
+  color: #ffffff;
+  background-color: #f25252;
+  box-shadow: inset 4px 0 0 #d14242;
+  border-radius: 5px;
+}
+
+/* Main Content Styling */
+.main-content {
+  transition: margin-left 0.3s ease;
+  /* padding: 5px; */
+}
+
+/* Navbar Header Styling */
+.navbar-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #38b6ff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-toggle {
+  cursor: pointer;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-right: 20px;
+}
+
+.nav-title {
+  flex-grow: 1;
+  text-align: center;
+  color: #ffffff;
+  font-size: calc(1rem + 1vw);
+}
+
+/* Responsive design adjustments */
+@media screen and (max-width: 768px) {
+  .text-responsive {
+    font-size: calc(1rem + 1.5vw);
   }
+}
