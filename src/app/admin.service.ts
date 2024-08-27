@@ -10,10 +10,10 @@ export class AdminService {
 
   constructor(private http: HttpClient) { }
 
-  addprice(data: any){
-    return this.http.post(this.url + 'addprice',JSON.stringify(data));
-  }
-  displayitem(){
-    return this.http.get(this.url + 'displayprice.php');
-  }
+  // addprice(data: any){
+  //   return this.http.post(this.url + 'addprice',JSON.stringify(data));
+  // }
+  // displayitem(){
+  //   return this.http.get(this.url + 'displayprice.php');
+  // }
 }
